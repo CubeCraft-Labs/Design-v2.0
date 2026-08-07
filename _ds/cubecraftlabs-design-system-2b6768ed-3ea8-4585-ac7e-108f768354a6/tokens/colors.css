@@ -1,0 +1,44 @@
+/* CubeCraftLabs — Color tokens (v2: grey bench + purple accent)
+   Medium-grey ground with a single violet brand accent. Token NAMES are kept
+   (--ccl-charcoal-*, --ccl-gold-*) so every component keeps working; only the
+   values changed. Prefer the --ccl-grey-* / --ccl-purple-* aliases in new work. */
+:root {
+  /* --- Base scale --- */
+  --ccl-charcoal:      #424246; /* page background — medium grey */
+  --ccl-charcoal-2:    #4e4e52; /* raised surface */
+  --ccl-charcoal-3:    #37373b; /* input / code block (recessed) */
+  --ccl-gold:          #a78bfa; /* brand accent — violet */
+  --ccl-gold-dim:      #8f6fe6; /* accent hover / pressed */
+  --ccl-text:          #f4f4f6; /* primary text */
+  --ccl-text-muted:    #b2b2ba; /* secondary text */
+  --ccl-border:        #585860; /* hairline borders */
+  --ccl-border-2:      #6d6d76; /* stronger border / grid lines */
+  --ccl-green:         #a9d88b; /* success */
+  --ccl-red:           #f08b93; /* error */
+  --ccl-white:         #ffffff;
+  --ccl-ink:           #2a2431; /* text on accent */
+
+  /* --- Preferred aliases --- */
+  --ccl-grey:          var(--ccl-charcoal);
+  --ccl-grey-2:        var(--ccl-charcoal-2);
+  --ccl-grey-3:        var(--ccl-charcoal-3);
+  --ccl-purple:        var(--ccl-gold);
+  --ccl-purple-dim:    var(--ccl-gold-dim);
+  --ccl-purple-wash:   rgba(167,139,250,0.12);
+
+  /* --- Semantic aliases --- */
+  --surface-page:      var(--ccl-charcoal);
+  --surface-raised:    var(--ccl-charcoal-2);
+  --surface-code:      var(--ccl-charcoal-3);
+  --text-primary:      var(--ccl-text);
+  --text-secondary:    var(--ccl-text-muted);
+  --text-on-gold:      var(--ccl-ink);
+  --text-on-accent:    var(--ccl-ink);
+  --accent:            var(--ccl-purple);
+  --accent-hover:      var(--ccl-purple-dim);
+  --border-hairline:   var(--ccl-border);
+  --border-strong:     var(--ccl-border-2);
+  --status-success:    var(--ccl-green);
+  --status-error:      var(--ccl-red);
+  --focus-ring:        var(--ccl-purple);
+}

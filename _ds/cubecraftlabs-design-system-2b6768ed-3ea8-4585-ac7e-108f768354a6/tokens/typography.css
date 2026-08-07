@@ -1,0 +1,33 @@
+/* CubeCraftLabs — Typography tokens
+   One family: JetBrains Mono. Mixed-case wordmark, uppercase tracked labels. */
+:root {
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  --font-body: var(--font-mono);
+  --font-display: var(--font-mono);
+
+  /* Weights */
+  --fw-regular: 400; /* @kind font */
+  --fw-medium:  500; /* @kind font */
+  --fw-bold:    700; /* @kind font */
+  --fw-display: 800; /* @kind font */
+
+  /* Type scale (px) */
+  --fs-caption:  11px;
+  --fs-label:    12px;
+  --fs-body:     14px;
+  --fs-body-lg:  15px;
+  --fs-h3:       18px;
+  --fs-h2:       22px;
+  --fs-h1:       28px;
+  --fs-display:  40px;
+
+  /* Line heights */
+  --lh-tight:  1.15; /* @kind font */
+  --lh-snug:   1.35; /* @kind font */
+  --lh-body:   1.7; /* @kind font */
+
+  /* Tracking */
+  --tracking-wordmark: 0.02em;  /* CubeCraftLabs wordmark */
+  --tracking-caps:     0.08em;  /* uppercase labels / buttons */
+  --tracking-caps-wide:0.14em;  /* section eyebrows */
+}

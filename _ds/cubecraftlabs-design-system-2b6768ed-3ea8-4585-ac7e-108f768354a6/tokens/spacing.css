@@ -1,0 +1,39 @@
+/* CubeCraftLabs — Spacing, radius, border, shadow, motion tokens
+   4px base unit. Square corners everywhere. Borders do the work shadows would. */
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-14: 56px;
+  --space-16: 64px;
+
+  /* Radius — the brand is square. 0 is the rule. */
+  --radius-none: 0px;
+  --radius-sm:   0px;
+  --radius-md:   0px;
+
+  /* Borders */
+  --border-width: 1px;
+  --border: var(--border-width) solid var(--ccl-border);
+  --border-strong-rule: var(--border-width) solid var(--ccl-border-2);
+  --border-accent: 1.5px solid var(--ccl-gold);
+
+  /* Shadows — flat brand. Only a faint lift where truly needed. */
+  --shadow-none: none;
+  --shadow-raised: 0 1px 0 0 var(--ccl-border);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.2, 0, 0, 1); /* @kind other */
+  --dur-fast: 100ms; /* @kind other */
+  --dur-base: 160ms; /* @kind other */
+
+  /* Scrollbar */
+  --scrollbar-width: 6px;
+  --scrollbar-thumb: var(--ccl-border-2);
+  --scrollbar-thumb-hover: var(--ccl-gold);
+}
