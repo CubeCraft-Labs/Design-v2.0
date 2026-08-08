@@ -4,15 +4,15 @@
    values changed. Prefer the --ccl-grey-* / --ccl-purple-* aliases in new work. */
 :root {
   /* --- Base scale --- */
-  --ccl-charcoal:      #424246; /* page background — medium grey */
-  --ccl-charcoal-2:    #4e4e52; /* raised surface */
-  --ccl-charcoal-3:    #37373b; /* input / code block (recessed) */
-  --ccl-gold:          #a78bfa; /* brand accent — violet */
-  --ccl-gold-dim:      #8f6fe6; /* accent hover / pressed */
+  --ccl-charcoal:      #2c2c30; /* page background — medium grey */
+  --ccl-charcoal-2:    #36363a; /* raised surface */
+  --ccl-charcoal-3:    #1b1b1e; /* input / code block (recessed) */
+  --ccl-gold:          #8f7ae0; /* brand accent — violet */
+  --ccl-gold-dim:      #7a63cc; /* accent hover / pressed */
   --ccl-text:          #f4f4f6; /* primary text */
   --ccl-text-muted:    #b2b2ba; /* secondary text */
-  --ccl-border:        #585860; /* hairline borders */
-  --ccl-border-2:      #6d6d76; /* stronger border / grid lines */
+  --ccl-border:        #3d3d44; /* hairline borders */
+  --ccl-border-2:      #4e4e57; /* stronger border / grid lines */
   --ccl-green:         #a9d88b; /* success */
   --ccl-red:           #f08b93; /* error */
   --ccl-white:         #ffffff;
@@ -24,7 +24,7 @@
   --ccl-grey-3:        var(--ccl-charcoal-3);
   --ccl-purple:        var(--ccl-gold);
   --ccl-purple-dim:    var(--ccl-gold-dim);
-  --ccl-purple-wash:   rgba(167,139,250,0.12);
+  --ccl-purple-wash:   rgba(143,122,224,0.12);
 
   /* --- Semantic aliases --- */
   --surface-page:      var(--ccl-charcoal);

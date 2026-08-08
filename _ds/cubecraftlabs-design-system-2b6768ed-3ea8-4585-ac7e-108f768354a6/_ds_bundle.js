@@ -23,8 +23,8 @@ function Badge({
 }) {
   const tones = {
     default: {
-      color: "var(--ccl-gold, #a78bfa)",
-      border: "var(--ccl-gold, #a78bfa)"
+      color: "var(--ccl-gold, #8f7ae0)",
+      border: "var(--ccl-gold, #8f7ae0)"
     },
     success: {
       color: "var(--ccl-green, #98c379)",
@@ -113,18 +113,18 @@ function Button({
   };
   const variants = {
     primary: {
-      background: hover ? "var(--ccl-gold-dim, #8f6fe6)" : "var(--ccl-gold, #a78bfa)",
+      background: hover ? "var(--ccl-gold-dim, #7a63cc)" : "var(--ccl-gold, #8f7ae0)",
       color: "var(--ccl-ink, #2a2431)",
       border: "1.5px solid transparent"
     },
     secondary: {
-      background: hover ? "rgba(167,139,250,0.12)" : "transparent",
-      color: "var(--ccl-gold, #a78bfa)",
-      border: "1.5px solid var(--ccl-gold, #a78bfa)"
+      background: hover ? "rgba(143,122,224,0.12)" : "transparent",
+      color: "var(--ccl-gold, #8f7ae0)",
+      border: "1.5px solid var(--ccl-gold, #8f7ae0)"
     },
     ghost: {
       background: "transparent",
-      color: hover ? "var(--ccl-gold, #a78bfa)" : "var(--ccl-text, #d4d4d4)",
+      color: hover ? "var(--ccl-gold, #8f7ae0)" : "var(--ccl-text, #d4d4d4)",
       border: "1.5px solid transparent"
     }
   };
@@ -159,7 +159,7 @@ try { (() => {
 function CubeMark({
   variant = "wireframe",
   size = 48,
-  color = "#a78bfa",
+  color = "#8f7ae0",
   strokeWidth,
   style,
   ...rest
@@ -412,8 +412,8 @@ function Tag({
       textTransform: "lowercase",
       padding: "3px 8px",
       borderRadius: 0,
-      border: `1px solid ${hover && onRemove ? "var(--ccl-gold, #a78bfa)" : "var(--ccl-border-2, #333333)"}`,
-      color: hover && onRemove ? "var(--ccl-gold, #a78bfa)" : "var(--ccl-text, #d4d4d4)",
+      border: `1px solid ${hover && onRemove ? "var(--ccl-gold, #8f7ae0)" : "var(--ccl-border-2, #333333)"}`,
+      color: hover && onRemove ? "var(--ccl-gold, #8f7ae0)" : "var(--ccl-text, #d4d4d4)",
       background: "var(--ccl-charcoal-2, #202020)",
       lineHeight: 1.3,
       display: "inline-flex",
@@ -502,8 +502,8 @@ function Checkbox({
       width: "16px",
       height: "16px",
       flex: "none",
-      border: `1px solid ${on ? "var(--ccl-gold, #a78bfa)" : "var(--ccl-border-2, #333333)"}`,
-      background: on ? "var(--ccl-gold, #a78bfa)" : "var(--ccl-charcoal-3, #262626)",
+      border: `1px solid ${on ? "var(--ccl-gold, #8f7ae0)" : "var(--ccl-border-2, #333333)"}`,
+      background: on ? "var(--ccl-gold, #8f7ae0)" : "var(--ccl-charcoal-3, #262626)",
       color: "var(--ccl-ink, #2a2431)",
       display: "inline-flex",
       alignItems: "center",
@@ -557,7 +557,7 @@ function Field({
     }
   }, label, required ? /*#__PURE__*/React.createElement("span", {
     style: {
-      color: "var(--ccl-gold, #a78bfa)"
+      color: "var(--ccl-gold, #8f7ae0)"
     }
   }, "*") : null) : null, children, error != null ? /*#__PURE__*/React.createElement("span", {
     style: {
@@ -611,7 +611,7 @@ function Input({
       fontSize: "14px"
     }
   };
-  const borderColor = invalid ? "var(--ccl-red, #e06c75)" : focus ? "var(--ccl-gold, #a78bfa)" : "var(--ccl-border-2, #333333)";
+  const borderColor = invalid ? "var(--ccl-red, #e06c75)" : focus ? "var(--ccl-gold, #8f7ae0)" : "var(--ccl-border-2, #333333)";
   const field = /*#__PURE__*/React.createElement("input", _extends({
     type: type,
     disabled: disabled,
@@ -657,7 +657,7 @@ function Input({
     "aria-hidden": "true",
     style: {
       paddingLeft: sizes[size].padding.split(" ")[1],
-      color: "var(--ccl-gold, #a78bfa)",
+      color: "var(--ccl-gold, #8f7ae0)",
       fontFamily: "var(--font-mono, 'JetBrains Mono', monospace)",
       fontSize: sizes[size].fontSize,
       fontWeight: 500,
@@ -724,7 +724,7 @@ function Radio({
       width: "16px",
       height: "16px",
       flex: "none",
-      border: `1px solid ${on ? "var(--ccl-gold, #a78bfa)" : "var(--ccl-border-2, #333333)"}`,
+      border: `1px solid ${on ? "var(--ccl-gold, #8f7ae0)" : "var(--ccl-border-2, #333333)"}`,
       background: "var(--ccl-charcoal-3, #262626)",
       display: "inline-flex",
       alignItems: "center",
@@ -735,7 +735,7 @@ function Radio({
     style: {
       width: "8px",
       height: "8px",
-      background: on ? "var(--ccl-gold, #a78bfa)" : "transparent",
+      background: on ? "var(--ccl-gold, #8f7ae0)" : "transparent",
       transition: "background var(--dur-fast, 100ms)"
     }
   })), label != null ? /*#__PURE__*/React.createElement("span", null, label) : null);
@@ -773,7 +773,7 @@ function Select({
       fontSize: "14px"
     }
   };
-  const borderColor = invalid ? "var(--ccl-red, #e06c75)" : focus ? "var(--ccl-gold, #a78bfa)" : "var(--ccl-border-2, #333333)";
+  const borderColor = invalid ? "var(--ccl-red, #e06c75)" : focus ? "var(--ccl-gold, #8f7ae0)" : "var(--ccl-border-2, #333333)";
   return /*#__PURE__*/React.createElement("div", {
     style: {
       position: "relative",
@@ -809,7 +809,7 @@ function Select({
     style: {
       position: "absolute",
       right: "10px",
-      color: "var(--ccl-gold, #a78bfa)",
+      color: "var(--ccl-gold, #8f7ae0)",
       fontSize: sizes[size].fontSize,
       pointerEvents: "none",
       lineHeight: 1
@@ -876,8 +876,8 @@ function Switch({
       width: "34px",
       height: "18px",
       flex: "none",
-      border: `1px solid ${on ? "var(--ccl-gold, #a78bfa)" : "var(--ccl-border-2, #333333)"}`,
-      background: on ? "rgba(167,139,250,0.22)" : "var(--ccl-charcoal-3, #262626)",
+      border: `1px solid ${on ? "var(--ccl-gold, #8f7ae0)" : "var(--ccl-border-2, #333333)"}`,
+      background: on ? "rgba(143,122,224,0.22)" : "var(--ccl-charcoal-3, #262626)",
       transition: "background var(--dur-fast, 100ms), border-color var(--dur-fast, 100ms)"
     }
   }, /*#__PURE__*/React.createElement("span", {
@@ -887,7 +887,7 @@ function Switch({
       left: on ? "18px" : "2px",
       width: "12px",
       height: "12px",
-      background: on ? "var(--ccl-gold, #a78bfa)" : "var(--ccl-text-muted, #6b6b6b)",
+      background: on ? "var(--ccl-gold, #8f7ae0)" : "var(--ccl-text-muted, #6b6b6b)",
       transition: "left var(--dur-base, 160ms) var(--ease-out), background var(--dur-fast, 100ms)"
     }
   })), label != null ? /*#__PURE__*/React.createElement("span", null, label) : null);
@@ -910,7 +910,7 @@ function Textarea({
   ...rest
 }) {
   const [focus, setFocus] = React.useState(false);
-  const borderColor = invalid ? "var(--ccl-red, #e06c75)" : focus ? "var(--ccl-gold, #a78bfa)" : "var(--ccl-border-2, #333333)";
+  const borderColor = invalid ? "var(--ccl-red, #e06c75)" : focus ? "var(--ccl-gold, #8f7ae0)" : "var(--ccl-border-2, #333333)";
   return /*#__PURE__*/React.createElement("textarea", _extends({
     rows: rows,
     disabled: disabled,
@@ -1099,17 +1099,17 @@ function IconButton({
   const box = boxes[size] || boxes.md;
   const variants = {
     ghost: {
-      background: hover ? "rgba(167,139,250,0.14)" : "transparent",
-      color: hover ? "var(--ccl-gold, #a78bfa)" : "var(--ccl-text, #d4d4d4)",
+      background: hover ? "rgba(143,122,224,0.14)" : "transparent",
+      color: hover ? "var(--ccl-gold, #8f7ae0)" : "var(--ccl-text, #d4d4d4)",
       border: "1px solid transparent"
     },
     outline: {
-      background: hover ? "rgba(167,139,250,0.12)" : "transparent",
-      color: "var(--ccl-gold, #a78bfa)",
-      border: "1px solid var(--ccl-gold, #a78bfa)"
+      background: hover ? "rgba(143,122,224,0.12)" : "transparent",
+      color: "var(--ccl-gold, #8f7ae0)",
+      border: "1px solid var(--ccl-gold, #8f7ae0)"
     },
     solid: {
-      background: hover ? "var(--ccl-gold-dim, #8f6fe6)" : "var(--ccl-gold, #a78bfa)",
+      background: hover ? "var(--ccl-gold-dim, #7a63cc)" : "var(--ccl-gold, #8f7ae0)",
       color: "var(--ccl-ink, #2a2431)",
       border: "1px solid transparent"
     }
@@ -1174,7 +1174,7 @@ function Card({
     style: {
       background: "var(--ccl-charcoal-2, #202020)",
       border: "1px solid var(--ccl-border, #2a2a2a)",
-      borderTop: accent ? "2px solid var(--ccl-gold, #a78bfa)" : "1px solid var(--ccl-border, #2a2a2a)",
+      borderTop: accent ? "2px solid var(--ccl-gold, #8f7ae0)" : "1px solid var(--ccl-border, #2a2a2a)",
       borderRadius: 0,
       display: "flex",
       flexDirection: "column",
@@ -1248,7 +1248,7 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
 const TONES = {
   out: "var(--ccl-text, #d4d4d4)",
   muted: "var(--ccl-text-muted, #6b6b6b)",
-  gold: "var(--ccl-gold, #a78bfa)",
+  gold: "var(--ccl-gold, #8f7ae0)",
   green: "var(--ccl-green, #98c379)",
   red: "var(--ccl-red, #e06c75)"
 };
@@ -1262,8 +1262,8 @@ function Terminal({
 }) {
   return /*#__PURE__*/React.createElement("div", _extends({
     style: {
-      background: "var(--ccl-charcoal-3, #37373b)",
-      border: "1px solid var(--ccl-border-2, #6d6d76)",
+      background: "var(--ccl-charcoal-3, #232327)",
+      border: "1px solid var(--ccl-border-2, #4e4e57)",
       borderRadius: 0,
       fontFamily: "var(--font-mono, 'JetBrains Mono', monospace)",
       overflow: "hidden",
@@ -1283,7 +1283,7 @@ function Terminal({
       display: "inline-flex",
       gap: "5px"
     }
-  }, ["#6a6a72", "#6a6a72", "#a78bfa"].map((c, i) => /*#__PURE__*/React.createElement("span", {
+  }, ["#6a6a72", "#6a6a72", "#8f7ae0"].map((c, i) => /*#__PURE__*/React.createElement("span", {
     key: i,
     style: {
       width: "9px",
@@ -1319,7 +1319,7 @@ function Terminal({
       }
     }, o.prompt ? /*#__PURE__*/React.createElement("span", {
       style: {
-        color: "var(--ccl-gold, #a78bfa)",
+        color: "var(--ccl-gold, #8f7ae0)",
         userSelect: "none"
       }
     }, "$") : null, /*#__PURE__*/React.createElement("span", {

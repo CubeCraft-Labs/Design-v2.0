@@ -4,6 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#2c2c30">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#2c2c30"/>
+    <g transform="translate(600 400)">
+      <rect x="-210" y="-210" width="200" height="200" fill="#36363a" stroke="#4e4e57" stroke-width="4"/>
+      <rect x="10" y="-210" width="200" height="200" fill="#8f7ae0"/>
+      <rect x="-210" y="10" width="200" height="200" fill="#7a63cc"/>
+      <rect x="10" y="10" width="200" height="200" fill="#232327" stroke="#4e4e57" stroke-width="4"/>
+    </g>
+  </svg>
+</template>
 </head>
 <body>
 <x-dc>
@@ -115,21 +126,21 @@
   </sc-if>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;accentColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#a78bfa&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#a78bfa&quot;,&quot;#b79cf0&quot;,&quot;#c9a9f5&quot;,&quot;#8f7ae0&quot;],&quot;section&quot;:&quot;Palette&quot;},&quot;pageGrey&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#424246&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#424246&quot;,&quot;#4a4a4e&quot;,&quot;#565660&quot;,&quot;#5d5d63&quot;],&quot;section&quot;:&quot;Palette&quot;},&quot;showComparison&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;accentColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#8f7ae0&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#8f7ae0&quot;,&quot;#a78bfa&quot;,&quot;#b79cf0&quot;,&quot;#7a63cc&quot;],&quot;section&quot;:&quot;Palette&quot;},&quot;pageGrey&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#2c2c30&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#242428&quot;,&quot;#2c2c30&quot;,&quot;#35353a&quot;,&quot;#3f3f45&quot;],&quot;section&quot;:&quot;Palette&quot;},&quot;showComparison&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;}}">
 class Component extends DCLogic {
   componentDidMount() { this.applyTokens(); }
   componentDidUpdate() { this.applyTokens(); }
 
   applyTokens() {
     const r = document.documentElement.style;
-    const accent = this.props.accentColor ?? "#a78bfa";
-    const grey = this.props.pageGrey ?? "#424246";
+    const accent = this.props.accentColor ?? "#8f7ae0";
+    const grey = this.props.pageGrey ?? "#2c2c30";
     r.setProperty("--ccl-gold", accent);
     r.setProperty("--ccl-gold-dim", this.shift(accent, -0.12));
     r.setProperty("--ccl-purple-wash", this.rgba(accent, 0.12));
     r.setProperty("--ccl-charcoal", grey);
     r.setProperty("--ccl-charcoal-2", this.shift(grey, 0.06));
-    r.setProperty("--ccl-charcoal-3", this.shift(grey, -0.07));
+    r.setProperty("--ccl-charcoal-3", this.shift(grey, -0.38));
     r.setProperty("--ccl-border", this.shift(grey, 0.14));
     r.setProperty("--ccl-border-2", this.shift(grey, 0.26));
   }
@@ -147,12 +158,12 @@ class Component extends DCLogic {
   rgba(hex, a) { return `rgba(${this.parse(hex).join(",")},${a})`; }
 
   renderVals() {
-    const accent = this.props.accentColor ?? "#a78bfa";
-    const grey = this.props.pageGrey ?? "#424246";
+    const accent = this.props.accentColor ?? "#8f7ae0";
+    const grey = this.props.pageGrey ?? "#2c2c30";
     const swatches = [
       { token: "--ccl-grey", hex: grey, role: "page background", css: "var(--ccl-charcoal)" },
       { token: "--ccl-grey-2", hex: this.shift(grey, 0.06), role: "raised surface", css: "var(--ccl-charcoal-2)" },
-      { token: "--ccl-grey-3", hex: this.shift(grey, -0.07), role: "input / code well", css: "var(--ccl-charcoal-3)" },
+      { token: "--ccl-grey-3", hex: this.shift(grey, -0.38), role: "input / code well", css: "var(--ccl-charcoal-3)" },
       { token: "--ccl-purple", hex: accent, role: "brand accent", css: "var(--ccl-gold)" },
       { token: "--ccl-purple-dim", hex: this.shift(accent, -0.12), role: "hover / pressed", css: "var(--ccl-gold-dim)" },
       { token: "--ccl-text", hex: "#f4f4f6", role: "primary text", css: "var(--ccl-text)" },
