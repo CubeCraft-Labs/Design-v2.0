@@ -1,0 +1,58 @@
+name: Design document CI
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  design-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check the shared preview runtime
+        run: |
+          node --check support.js
+      - name: Validate local assets used by the published design documents
+        run: |
+          python3 - <<'PYTHON'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          from urllib.parse import unquote, urlsplit
+
+          class AssetReferences(HTMLParser):
+              def __init__(self, page):
+                  super().__init__()
+                  self.page = page
+
+              def handle_starttag(self, tag, attrs):
+                  attrs = dict(attrs)
+                  if tag in ("script", "img", "source"):
+                      value = attrs.get("src")
+                  elif tag == "link" and "stylesheet" in attrs.get("rel", "").split():
+                      value = attrs.get("href")
+                  else:
+                      return
+                  if not value:
+                      return
+                  url = urlsplit(value)
+                  if url.scheme or url.netloc or not url.path:
+                      return
+                  asset = Path(unquote(url.path))
+                  target = Path(*asset.parts[1:]) if asset.is_absolute() else self.page.parent / asset
+                  if not target.is_file():
+                      raise SystemExit(f"{self.page}: missing local asset {asset}")
+
+          pages = sorted(Path(".").glob("*.html"))
+          if not pages:
+              raise SystemExit("No HTML design documents found at the project root")
+          for page in pages:
+              parser = AssetReferences(page)
+              parser.feed(page.read_text())
+              parser.close()
+          print(f"Validated local asset references in {len(pages)} design documents.")
+          PYTHON
